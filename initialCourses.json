@@ -1,0 +1,43 @@
+[
+
+        {
+            "name": "Object-Oriented Programming I",
+            "code": "CMSC131",
+            "days": [1,3,5],
+            "timeslot": [1,3,5],
+            "credits": 4
+        },
+
+        {
+            "name": "Academic Writing",
+            "code": "ENGL101",
+            "days": [1,3,5],
+            "timeslot": [1,2,4],
+            "credits": 3
+        },
+
+        {
+            "name": "Applied Probability and Statistics I",
+            "code": "STAT400",
+            "days": [2,4],
+            "timeslot": [2,4],
+            "credits": 3
+        },
+
+        {
+            "name": "Calculus I",
+            "code": "MATH140",
+            "days": [1,2,3,4,5],
+            "timeslot": [1,3,5],
+            "credits": 4
+        },
+
+        {
+            "name": "Oral Communication: Principles and Practices",
+            "code": "COMM107",
+            "days": [1,2,3,4,5],
+            "timeslot": [1,3,5],
+            "credits": 4
+        }
+
+]
