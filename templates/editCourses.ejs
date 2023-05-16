@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+
+<body>
+	<h1>Edit Available Courses</h1>
+
+	<br>
+	<h2>Available Courses</h2>
+	<div><%- availableCoursesTable %></div>
+	<br>
+	<h3>Add Course</h3>
+	<form action="http://localhost:5000/processAddCourse" method="post">
+		<fieldset>
+			<div><%- errorStatus %></div>
+			
+			<label><strong>Course Code: </strong><input type="text" name="code" required/></label><br>
+            <label><strong>Course Name: </strong><input type="text" name="name" required/></label><br>
+            
+            <strong>Available Days: </strong>
+			<label>Monday<input type="checkbox" name="days" value="1"></label>
+            <label>Tuesday<input type="checkbox" name="days" value="2"></label>
+            <label>Wednesday<input type="checkbox" name="days" value="3"></label>
+            <label>Thursday<input type="checkbox" name="days" value="4"></label>
+            <label>Friday<input type="checkbox" name="days" value="5"></label><br>
+            
+            <strong>Available Timeslots: </strong>
+			<label>1<input type="checkbox" name="timeslot" value="1"></label>
+            <label>2<input type="checkbox" name="timeslot" value="2"></label>
+            <label>3<input type="checkbox" name="timeslot" value="3"></label>
+            <label>4<input type="checkbox" name="timeslot" value="4"></label>
+            <label>5<input type="checkbox" name="timeslot" value="5"></label>
+			
+            <label><strong>Course Code: </strong><input type="number" name="credits" required/></label><br>
+            
+            <br>
+			<input type="reset" value = "Reset">
+			<input type="submit" value="Add Course">
+		</fieldset>
+		<br>
+	</form>
+
+    <h3>Remove Course</h3>
+	<form action="http://localhost:5000/processRemoveCourse" method="post">
+		<fieldset>			
+			<label><strong>Course Code: </strong><input type="text" name="code" required/></label><br>
+            
+            <br>
+			<input type="reset" value = "Reset">
+			<input type="submit" value="Remove Course">
+		</fieldset>
+		<br>
+	</form>
+	<hr>
+	<a href="/">HOME</a>
+
+</body>
+
+</html>

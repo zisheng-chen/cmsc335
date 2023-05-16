@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+
+<body>
+	<h1>Edit Current Schedule</h1>
+	<h2>Current Schedule</h2>
+	<div><%- currentScheduleTable %></div>
+	<br>
+	<h2>Available Courses</h2>
+
+	<div><%- availableCoursesTable %></div>
+	<br>
+	<h3>Add Course to Schedule</h3>
+	<form action="http://localhost:5000/processAdd" method="post">
+		<fieldset>
+			<div><%- errorStatus %></div>
+			
+			<label><strong>Course Code: </strong><input type="text" name="code"/></label>
+			<label><strong>Time Slot: </strong><input type="number" name="timeslot" min="1" max="5"/></label>
+			<br><br>
+			<input type="reset" value = "Reset">
+			<input type="submit" value="Add Course">
+		</fieldset>
+		<br>
+	</form>
+
+	<h3>Remove Course from Schedule</h3>
+	<form action="http://localhost:5000/processRemove" method="post">
+		<fieldset>		
+			<label><strong>Course Code: </strong><input type="text" name="code"/></label>
+			
+			<br><br>
+			<input type="reset" value = "Reset">
+			<input type="submit" value= "Remove Course">
+		</fieldset>
+		<br>
+	</form>
+	<hr>
+	<a href="/">HOME</a>
+
+</body>
+
+</html>
